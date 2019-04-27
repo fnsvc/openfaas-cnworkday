@@ -1,0 +1,7 @@
+provider:
+  name: openfaas
+functions:
+  cn-workday:
+    lang: python3-http
+    handler: ./cn-workday
+    image: mcores/cn-workday:latest
