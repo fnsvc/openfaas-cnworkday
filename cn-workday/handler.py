@@ -46,6 +46,7 @@ def load_data(year):
             day = cleanup_dict(row)
             dt = TZ.localize(datetime.strptime(day['date'], '%Y-%m-%d'))
             CACHE[year][day['date']] = {
+                'name': day['name'],
                 'year': dt.year,
                 'month': dt.month,
                 'day': dt.day,
